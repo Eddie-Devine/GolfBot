@@ -1,8 +1,8 @@
 {
     "teeTimes": ["09:00:00", "09:10:00", "09:20:00", "09:30:00", "09:40:00", "09:50:00"],
     "date": "20210410",
-    "username": "mdevine",
-    "password": "EddieDani1sa",
+    "username": "",
+    "password": "",
 
     "cookie": "",
     "sessionTimeWeekend": [6, 20],
