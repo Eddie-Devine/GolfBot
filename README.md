@@ -1,2 +1,2 @@
 # GolfBot
-A tee time booking bot.
+Simply fill out options.json and type ``npm run start``
