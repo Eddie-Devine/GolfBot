@@ -1,0 +1,19 @@
+{
+  "name": "golfbot",
+  "version": "1.0.0",
+  "description": "A tee time booking bot.",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm install && node bot.js"
+  },
+  "author": "Eddie Devine",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "fs": "0.0.1-security",
+    "moment": "^2.29.1",
+    "node-fetch": "^2.6.1",
+    "puppeteer": "^8.0.0"
+  }
+}

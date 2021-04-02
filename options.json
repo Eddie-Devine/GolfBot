@@ -1,0 +1,13 @@
+{
+    "teeTimes": ["09:00:00", "09:10:00", "09:20:00", "09:30:00", "09:40:00", "09:50:00"],
+    "date": "20210410",
+    "username": "mdevine",
+    "password": "EddieDani1sa",
+
+    "cookie": "",
+    "sessionTimeWeekend": [6, 20],
+    "sessionTime": [6, 50],
+    "bookingTimeWeekend": [6, 30],
+    "bookingTime": [7, 0],
+    "showBrowser": false
+}
