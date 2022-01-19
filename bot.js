@@ -92,7 +92,9 @@ async function openSession(){
         options['cookie'] = options['cookie'] + cookie;
     }
     log('Grabbed cookies');
+}
 
+function wait(){
     let year = options['date'].substring(0, 4);
     let month = options['date'].substring(4, 6);
     let day = options['date'].substring(6, 8);
@@ -315,12 +317,37 @@ async function book(spot){
         log(color.inverse('   Holes: ' + resp['data']['numberOfHoles'] + '       '));
         log(color.inverse('   Staring Hole: ' + resp['data']['startingHole'] + ' '));
         log(color.inverse('   ID: ' + resp['data']['bookingId'] + '    '));
-        process.exit();
     }
     else{
         log(color.red.bold('\nFAILED'));
         log('\n');
         log(resp);
+    }
+
+    if(options['repeat']){
+        let year = options['date'].substring(0, 4);
+        let month = options['date'].substring(4, 6);
+        let day = options['date'].substring(6, 8);
+        let dateStr = `${month}/${day}/${year}`;
+        let d = new Date(dateStr);
+
+        let newDate = new Date(year, month, day);
+        newDate.setDate(d.getDate() + 7);
+
+        let newYear = newDate.getFullYear();
+        let newMonth = newDate.getMonth();
+        let newDay = newDate.getDate();
+
+        if(newMonth < 10) newMonth = `0${newMonth}`;
+        if(newDay < 10) newDay = `0${newDay}`;
+
+        let newDateStr = `${newYear}${newMonth}${newDay}`;
+        options['date'] = newDateStr;
+
+        wait();
+    }
+    else{
+        log('\nnot repeating - exiting');
         process.exit();
     }
 }

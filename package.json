@@ -8,7 +8,7 @@
     "start": "npm install && node bot.js"
   },
   "author": "Eddie Devine",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.0",
     "fs": "0.0.1-security",
