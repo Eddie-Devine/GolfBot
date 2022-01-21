@@ -92,6 +92,7 @@ async function openSession(){
         options['cookie'] = options['cookie'] + cookie;
     }
     log('Grabbed cookies');
+    wait();
 }
 
 function wait(){
